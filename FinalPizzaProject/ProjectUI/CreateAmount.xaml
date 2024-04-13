@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalPizzaProject.ProjectUI.CreateAmount"
+             Title="CreateAmount">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+            Text="Create Account" FontSize="Large" HorizontalOptions="Center" FontAttributes="Bold"/>
+            
+            <Label 
+            Text="To become a pizza lover!" FontSize="Small" FontAttributes="Italic" HorizontalOptions="Center"/>
+
+            <Label Text="Enter Your Details Below" HorizontalOptions="Center" TranslationY="25"/>
+            <Entry Placeholder="Enter Your Email" TranslationY="25" PlaceholderColor="Black" WidthRequest="300" HorizontalOptions="Center" x:Name="email"/>
+            <Entry Placeholder="Enter Your Address" TranslationY="25" PlaceholderColor="Black" WidthRequest="300" HorizontalOptions="Center" x:Name="address"/>
+            <Entry Placeholder="Enter Your First Name" TranslationY="25" PlaceholderColor="Black" WidthRequest="300" HorizontalOptions="Center" x:Name="firstname"/>
+            <Entry Placeholder="Enter Your Surname" TranslationY="25" PlaceholderColor="Black" WidthRequest="300" HorizontalOptions="Center" x:Name="surname"/>
+
+            <Label Text="Enter Your Mobile Number" HorizontalOptions="Center" TranslationY="65"/>
+            <Entry Placeholder="+1 Mobile Number" TranslationY="65" PlaceholderColor="Black" WidthRequest="300" HorizontalOptions="Center" x:Name="phonenumber"/>
+            <Button Text="Enter" HorizontalOptions="CenterAndExpand" WidthRequest="100" TranslationY="85" BackgroundColor="Black" Clicked="Button_Clicked_1"/>
+        </VerticalStackLayout>
+    </ScrollView>
+ 
+</ContentPage>

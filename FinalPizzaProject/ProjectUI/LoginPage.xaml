@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalPizzaProject.ProjectUI.LoginPage"
+             Title="LoginPage">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+                Text="Just Pizza!" FontSize="Large" HorizontalOptions="Center"  FontAttributes="Bold"/>
+            <Image Source="pizza.png" WidthRequest="400" HorizontalOptions="Center"/>
+            <Entry Placeholder="Username" x:Name="username" PlaceholderColor="Black" HorizontalOptions="CenterAndExpand" WidthRequest="300"/>
+            <Entry Placeholder="Password" x:Name="password" PlaceholderColor="Black" HorizontalOptions="CenterAndExpand" WidthRequest="300"/>
+            <Button Text="Enter" Clicked="Button_Clicked" HorizontalOptions="CenterAndExpand" WidthRequest="100" TranslationY="25" BackgroundColor="Black"/>
+
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="Don't have an account?" TranslationY="40"/>
+                <Button Text="Sign up" TranslationX="-15" WidthRequest="100" HeightRequest="100" FontAttributes="Bold" BackgroundColor="Transparent" TextColor="Black"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

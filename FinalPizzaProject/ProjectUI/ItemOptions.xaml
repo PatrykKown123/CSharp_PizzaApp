@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalPizzaProject.ProjectUI.ItemOptions"
+             Title="ItemOptions">
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="LightGray">
+            <VerticalStackLayout BackgroundColor="#090f2f">
+                <Label 
+                    Text="Just Pizza!" FontSize="Large" HorizontalOptions="Center"  FontAttributes="Bold" TextColor="White" />
+                <Label 
+                    Text="Delivering to: Client's Address" FontSize="12.5" HorizontalOptions="Center"  FontAttributes="Bold" TextColor="White" x:Name="address"/>
+            </VerticalStackLayout>
+
+            <Grid>
+                <Image Source="pizzatexture.jpg" Aspect="AspectFill" HeightRequest="75"/>
+                <VerticalStackLayout>
+                    <Label Text="Menu" FontSize="Header" FontAttributes="Bold" HorizontalOptions="Center" TranslationY="5">
+                        <Label.Shadow>
+                            <Shadow Brush="Black"
+                                Offset="3,4"
+                                Radius="2"
+                                Opacity="0.5"/>
+                        </Label.Shadow>
+                    </Label>
+                </VerticalStackLayout>
+            </Grid>
+            <HorizontalStackLayout HeightRequest="3" BackgroundColor="#ff9e36"></HorizontalStackLayout>
+            <HorizontalStackLayout >
+                <Image Source="pizza.png" HeightRequest="150" BackgroundColor="White"/>
+                <VerticalStackLayout VerticalOptions="Center">
+                    <Label Text="  Create Your Own Pizza"/>
+                    <Label Text="  $20.66"/>
+                </VerticalStackLayout>
+                <CheckBox x:Name="pizzaCheck" TranslationX="15"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HeightRequest="3" BackgroundColor="#ff9e36"></HorizontalStackLayout>
+            <HorizontalStackLayout BackgroundColor="#090f2f" >
+                <Image Source="cola.png" HeightRequest="150"/>
+                <VerticalStackLayout VerticalOptions="Center">
+                    <Label Text="  Drink (COKE)" TextColor="White"/>
+                    <Label Text="  $2.99"  TextColor="White"/>
+                </VerticalStackLayout>
+                <CheckBox x:Name="cokeCheck" TranslationX="15"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HeightRequest="3" BackgroundColor="#ff9e36"></HorizontalStackLayout>
+            <HorizontalStackLayout >
+                <Image Source="garlicdipping.png" HeightRequest="150" BackgroundColor="White"/>
+                <VerticalStackLayout VerticalOptions="Center">
+                    <Label Text="  Dips/Snacks" TextColor="Black"/>
+                    <Label Text="  $TBD"  TextColor="Black"/>
+                </VerticalStackLayout>
+                <CheckBox x:Name="extramItemsCheck" TranslationX="15"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HeightRequest="3" BackgroundColor="#ff9e36"></HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

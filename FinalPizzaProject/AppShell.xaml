@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="FinalPizzaProject.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:FinalPizzaProject.ProjectUI"
+    Shell.FlyoutBehavior="Flyout"
+    Title="FinalPizzaProject">
+
+    <ShellContent
+        Title="LoginPage"
+        ContentTemplate="{DataTemplate local:LoginPage}"
+        Route="LoginPage" />
+
+    <ShellContent
+        Title="CreateAmount"
+        ContentTemplate="{DataTemplate local:CreateAmount}"
+        Route="CreateAmount" />
+
+    <ShellContent
+        Title="WelcomeLandingPage"
+        ContentTemplate="{DataTemplate local:WelcomeLandingPage}"
+        Route="WelcomeLandingPage" />
+
+    <ShellContent
+        Title="ItemOptions"
+        ContentTemplate="{DataTemplate local:ItemOptions}"
+        Route="ItemOptions" />
+
+</Shell>

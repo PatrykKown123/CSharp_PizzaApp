@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalPizzaProject.ProjectUI.WelcomeLandingPage"
+             Title="WelcomeLandingPage">
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor= "#090f2f">
+            <VerticalStackLayout BackgroundColor="LightGray" HeightRequest="50">
+                <HorizontalStackLayout>
+                    <Button 
+                        Text ="&lt;"
+                        TextColor="White" BackgroundColor="Black" WidthRequest="50" HeightRequest="50" TranslationY="0" FontSize="30" HorizontalOptions="Start"/>
+                    <Label Text="GO BACK" 
+                           FontSize="Small" TextColor="Black" TranslationY="12.5" TranslationX="10"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        <Label 
+            Text="Just Pizza!" FontSize="Small" FontAttributes="Italic" HorizontalOptions="Center" TextColor="White"/>
+        <Label 
+            Text="Welcome," FontSize="Large" HorizontalOptions="Center" TextColor="White" TranslationY="25"/>
+        <Label 
+            Text="John Doe" FontSize="Small" FontAttributes="Bold" HorizontalOptions="Center" TextColor="White" TranslationY="25" x:Name="personsName"/>
+        <Label 
+            Text="DISCOVER THE BEST PIZZA NEAR YOU!" HorizontalOptions="Center" TextColor="White" TranslationY="25"/>
+        <Button 
+            Text="ORDER NOW" HorizontalOptions="CenterAndExpand" WidthRequest="150"  BackgroundColor="#ff9e36" TranslationY="35"/>
+
+            <VerticalStackLayout BackgroundColor="LightGray" TranslationY="45" HeightRequest="280">
+                <Label
+                Text="Order great pizza in a snap. With so many great options to choose from just a few taps away!"
+                FontSize="10" TextColor="Black" TranslationX="10"/>
+                <Label
+                Text="How It Works"
+                FontSize="Small" TextColor="Black" TranslationY="10" TranslationX="10"/>
+                <HorizontalStackLayout>
+                    <Image Source="mobilephoneicon.png" HeightRequest="50" TranslationY="15" TranslationX="10"/>
+                    <Label Text="  Open your Just Pizza app!" TranslationX="10" FontSize="13" TranslationY="30"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Image Source="forkspoon.png" HeightRequest="50" TranslationY="15" TranslationX="10"/>
+                    <Label Text="  Find what you're craving and place your order!" TranslationX="13" FontSize="13" TranslationY="30"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Image Source="mappin.png" HeightRequest="50" TranslationY="15" TranslationX="0"/>
+                    <Label Text="  Track your order delivery!" TranslationX="-10" FontSize="13" TranslationY="30"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+            <VerticalStackLayout BackgroundColor="#ff9e36" HeightRequest="50">
+                <Label
+                    Text="ORDER NOW"
+                    FontSize="Small" TextColor="Black" TranslationY="10" TranslationX="10"/>
+                <Button
+                    Text=">"
+                    TextColor="White" BackgroundColor="Black" WidthRequest="50" HeightRequest="50" HorizontalOptions="End" TranslationY="-25" FontSize="30"/>
+            </VerticalStackLayout>
+            <Label Text="Have Question?" TextColor="White" TranslationX="10" TranslationY="5"/>
+            <Label Text="We're Here To Help" TextColor="White" TranslationX="10" TranslationY="5" FontSize="Medium"/>
+            <Label Text="FAQ" TextColor="White" TranslationX="10" TranslationY="5"/>
+            <Label Text="Contact Us" TextColor="White" TranslationX="10" TranslationY="5"/>
+            <Label Text="Live Support" TextColor="White" TranslationX="10" TranslationY="5"/>
+            <Label Text="Report a Problem" TextColor="White" TranslationX="10" TranslationY="5"/> 
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
