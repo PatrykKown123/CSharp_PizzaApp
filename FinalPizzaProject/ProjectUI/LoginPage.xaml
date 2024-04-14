@@ -11,11 +11,11 @@
             <Image Source="pizza.png" WidthRequest="400" HorizontalOptions="Center"/>
             <Entry Placeholder="Username" x:Name="username" PlaceholderColor="Black" HorizontalOptions="CenterAndExpand" WidthRequest="300"/>
             <Entry Placeholder="Password" x:Name="password" PlaceholderColor="Black" HorizontalOptions="CenterAndExpand" WidthRequest="300"/>
-            <Button Text="Enter" Clicked="Button_Clicked" HorizontalOptions="CenterAndExpand" WidthRequest="100" TranslationY="25" BackgroundColor="Black"/>
+            <Button Text="Login" x:Name="login" Clicked="login_Clicked" HorizontalOptions="CenterAndExpand" WidthRequest="100" TranslationY="25" BackgroundColor="Black"/>
 
             <HorizontalStackLayout HorizontalOptions="Center">
                 <Label Text="Don't have an account?" TranslationY="40"/>
-                <Button Text="Sign up" TranslationX="-15" WidthRequest="100" HeightRequest="100" FontAttributes="Bold" BackgroundColor="Transparent" TextColor="Black"/>
+                <Button Text="Sign up" x:Name="signup" Clicked="signup_Clicked" TranslationX="-18" TranslationY="28" WidthRequest="100" HeightRequest="25" FontAttributes="Bold" BackgroundColor="Transparent" TextColor="Black" />
             </HorizontalStackLayout>
         </VerticalStackLayout>
     </ScrollView>

@@ -6,4 +6,14 @@ public partial class WelcomeLandingPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void ordernow_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new ItemOptions());
+    }
+
+    private void continue_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new ItemOptions());
+    }
 }

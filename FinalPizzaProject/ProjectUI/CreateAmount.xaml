@@ -16,10 +16,11 @@
             <Entry Placeholder="Enter Your Address" TranslationY="25" PlaceholderColor="Black" WidthRequest="300" HorizontalOptions="Center" x:Name="address"/>
             <Entry Placeholder="Enter Your First Name" TranslationY="25" PlaceholderColor="Black" WidthRequest="300" HorizontalOptions="Center" x:Name="firstname"/>
             <Entry Placeholder="Enter Your Surname" TranslationY="25" PlaceholderColor="Black" WidthRequest="300" HorizontalOptions="Center" x:Name="surname"/>
-
+            <Entry Placeholder="Enter A Password" TranslationY="25" PlaceholderColor="Black" WidthRequest="300" HorizontalOptions="Center" x:Name="password"/>
+            
             <Label Text="Enter Your Mobile Number" HorizontalOptions="Center" TranslationY="65"/>
             <Entry Placeholder="+1 Mobile Number" TranslationY="65" PlaceholderColor="Black" WidthRequest="300" HorizontalOptions="Center" x:Name="phonenumber"/>
-            <Button Text="Enter" HorizontalOptions="CenterAndExpand" WidthRequest="100" TranslationY="85" BackgroundColor="Black" Clicked="Button_Clicked_1"/>
+            <Button Text="Enter" HorizontalOptions="CenterAndExpand" WidthRequest="100" TranslationY="85" BackgroundColor="Black" x:Name="createAccount" Clicked="createAccount_Clicked"/>
         </VerticalStackLayout>
     </ScrollView>
  

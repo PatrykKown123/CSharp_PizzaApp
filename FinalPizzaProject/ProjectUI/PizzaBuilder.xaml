@@ -3,10 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinalPizzaProject.ProjectUI.PizzaBuilder"
              Title="PizzaBuilder">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="LightGray">
+            <HorizontalStackLayout HeightRequest="3" BackgroundColor="#ff9e36"></HorizontalStackLayout>
+            <VerticalStackLayout BackgroundColor="#090f2f">
+                <Label 
+                    Text="Just Pizza!" FontSize="Large" HorizontalOptions="Center"  FontAttributes="Bold" TextColor="White" />
+                <Label 
+                    Text="Delivering to: Client's Address" FontSize="12.5" HorizontalOptions="Center"  FontAttributes="Bold" TextColor="White" x:Name="address"/>
+            </VerticalStackLayout>
+            <HorizontalStackLayout HeightRequest="3" BackgroundColor="#ff9e36"></HorizontalStackLayout>
+            <VerticalStackLayout BackgroundColor="DarkGray" HeightRequest="300">
+                
+            </VerticalStackLayout>
+            <HorizontalStackLayout HeightRequest="3" BackgroundColor="#ff9e36"></HorizontalStackLayout>
+            
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

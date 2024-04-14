@@ -27,4 +27,13 @@
         ContentTemplate="{DataTemplate local:ItemOptions}"
         Route="ItemOptions" />
 
+    <ShellContent
+        Title="PizzaBuilder"
+        ContentTemplate="{DataTemplate local:PizzaBuilder}"
+        Route="PizzaBuilder" />
+
+    <ShellContent
+        Title="SummaryPage"
+        ContentTemplate="{DataTemplate local:SummaryPage}"
+        Route="SummaryPage" />
 </Shell>

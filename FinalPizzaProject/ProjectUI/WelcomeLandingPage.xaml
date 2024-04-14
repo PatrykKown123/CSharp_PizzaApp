@@ -5,16 +5,7 @@
              Title="WelcomeLandingPage">
     <ScrollView>
         <VerticalStackLayout BackgroundColor= "#090f2f">
-            <VerticalStackLayout BackgroundColor="LightGray" HeightRequest="50">
-                <HorizontalStackLayout>
-                    <Button 
-                        Text ="&lt;"
-                        TextColor="White" BackgroundColor="Black" WidthRequest="50" HeightRequest="50" TranslationY="0" FontSize="30" HorizontalOptions="Start"/>
-                    <Label Text="GO BACK" 
-                           FontSize="Small" TextColor="Black" TranslationY="12.5" TranslationX="10"/>
-                </HorizontalStackLayout>
-            </VerticalStackLayout>
-        <Label 
+            <Label 
             Text="Just Pizza!" FontSize="Small" FontAttributes="Italic" HorizontalOptions="Center" TextColor="White"/>
         <Label 
             Text="Welcome," FontSize="Large" HorizontalOptions="Center" TextColor="White" TranslationY="25"/>
@@ -23,7 +14,7 @@
         <Label 
             Text="DISCOVER THE BEST PIZZA NEAR YOU!" HorizontalOptions="Center" TextColor="White" TranslationY="25"/>
         <Button 
-            Text="ORDER NOW" HorizontalOptions="CenterAndExpand" WidthRequest="150"  BackgroundColor="#ff9e36" TranslationY="35"/>
+            Text="ORDER NOW" HorizontalOptions="CenterAndExpand" WidthRequest="150"  BackgroundColor="#ff9e36" TranslationY="35" x:Name="ordernow" Clicked="ordernow_Clicked"/>
 
             <VerticalStackLayout BackgroundColor="LightGray" TranslationY="45" HeightRequest="280">
                 <Label
@@ -51,7 +42,8 @@
                     FontSize="Small" TextColor="Black" TranslationY="10" TranslationX="10"/>
                 <Button
                     Text=">"
-                    TextColor="White" BackgroundColor="Black" WidthRequest="50" HeightRequest="50" HorizontalOptions="End" TranslationY="-25" FontSize="30"/>
+                    TextColor="White" BackgroundColor="Black" WidthRequest="50" HeightRequest="50" HorizontalOptions="End" TranslationY="-25" FontSize="30"
+                    x:Name="continue" Clicked="continue_Clicked"/>
             </VerticalStackLayout>
             <Label Text="Have Question?" TextColor="White" TranslationX="10" TranslationY="5"/>
             <Label Text="We're Here To Help" TextColor="White" TranslationX="10" TranslationY="5" FontSize="Medium"/>

@@ -53,6 +53,10 @@
                 <CheckBox x:Name="extramItemsCheck" TranslationX="15"/>
             </HorizontalStackLayout>
             <HorizontalStackLayout HeightRequest="3" BackgroundColor="#ff9e36"></HorizontalStackLayout>
+            <VerticalStackLayout  BackgroundColor="#090f2f" HeightRequest="140">
+                <Button 
+                Text="CONTINUE" HorizontalOptions="CenterAndExpand" WidthRequest="150" BackgroundColor="#ff9e36" TranslationY="35" x:Name="continue" Clicked="continue_Clicked"/>
+            </VerticalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
