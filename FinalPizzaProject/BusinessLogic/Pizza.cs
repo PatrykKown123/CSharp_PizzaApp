@@ -10,20 +10,17 @@ namespace FinalPizzaProject.BusinessLogic
     {
         private List<PizzaToppings> pizzaToppings;
         private PizzaBase pizzaBase;
-        private PizzaSauce pizzaSauce;
-        private PizzaCheese pizzaCheese;
+
 
         public Pizza()
         {
         }
 
-        public Pizza(List<PizzaToppings> pizzaToppings, PizzaBase pizzaBase, PizzaSauce pizzaSauce, PizzaCheese pizzaCheese, string productName, int productID, int productQuantity, double productPrice) :
+        public Pizza(List<PizzaToppings> pizzaToppings, PizzaBase pizzaBase, string productName, int productID, int productQuantity, double productPrice) :
             base(productName, productID, productQuantity, productPrice)
         {
             this.pizzaToppings = pizzaToppings;
             this.pizzaBase = pizzaBase;
-            this.pizzaSauce = pizzaSauce;
-            this.pizzaCheese = pizzaCheese;
         }
 
         public List<PizzaToppings> PizzaToppings
@@ -38,23 +35,11 @@ namespace FinalPizzaProject.BusinessLogic
             set => pizzaBase = value;
         }
 
-        public PizzaSauce PizzaSauce
-        {
-            get => pizzaSauce;
-            set => pizzaSauce = value;
-        }
-
-        public PizzaCheese PizzaCheese
-        {
-            get => pizzaCheese;
-            set => pizzaCheese = value;
-        }
-
         public override string ToString()
         {
             string concatenatedToppings = "";
             pizzaToppings.ForEach(topping => concatenatedToppings += topping.ToString() + ", ");
-            return $"Pizza info: Pizza base: {pizzaBase}, pizza sauce: {PizzaSauce}, pizza cheese: {pizzaCheese}, pizza toppings: {concatenatedToppings}";
+            return $"Pizza info: Pizza base: {pizzaBase}, pizza toppings: {concatenatedToppings}";
         }
 
     }

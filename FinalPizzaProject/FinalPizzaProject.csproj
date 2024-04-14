@@ -63,7 +63,9 @@
 	  <None Remove="Resources\Images\garlicdipping.png" />
 	  <None Remove="Resources\Images\mappin.png" />
 	  <None Remove="Resources\Images\mobilephoneicon.png" />
+	  <None Remove="Resources\Images\pepperoni.png" />
 	  <None Remove="Resources\Images\pizza.png" />
+	  <None Remove="Resources\Images\pizzabase.png" />
 	  <None Remove="Resources\Images\pizzatexture.jpg" />
 	</ItemGroup>
 

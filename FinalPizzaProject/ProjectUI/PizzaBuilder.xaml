@@ -13,11 +13,58 @@
                     Text="Delivering to: Client's Address" FontSize="12.5" HorizontalOptions="Center"  FontAttributes="Bold" TextColor="White" x:Name="address"/>
             </VerticalStackLayout>
             <HorizontalStackLayout HeightRequest="3" BackgroundColor="#ff9e36"></HorizontalStackLayout>
-            <VerticalStackLayout BackgroundColor="DarkGray" HeightRequest="300">
-                
-            </VerticalStackLayout>
+            <Grid BackgroundColor="DarkGray" x:Name="pizzaBuilder">
+                <Image Source="pizzabase.png" WidthRequest="300" x:Name="pizzabase" VerticalOptions="Center" HorizontalOptions="Center"/>
+            </Grid>
             <HorizontalStackLayout HeightRequest="3" BackgroundColor="#ff9e36"></HorizontalStackLayout>
-            
+
+            <VerticalStackLayout BackgroundColor="LightGray">
+                <Label Text="Pizza Base" FontSize="Small" FontAttributes="Bold" TranslationX="13" TranslationY="10" Grid.Column="0" HorizontalOptions="Center"/>
+                <Grid HorizontalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Regular Crust" FontSize="13" TranslationX="13" VerticalOptions="Center" Grid.Column="0" TranslationY="0"/>
+                    <CheckBox x:Name="regCrust" TranslationX="12" Grid.Column="1" TranslationY="0"/>
+
+                    <Label Text="Gluten Free Crust" FontSize="13" TranslationX="13" VerticalOptions="Center" Grid.Column="0" TranslationY="20"/>
+                    <CheckBox x:Name="glutenfreeCrust" TranslationX="12" Grid.Column="1" TranslationY="20"/>
+                </Grid>
+                <Label Text="Pizza Toppings" FontSize="Small" FontAttributes="Bold" TranslationX="13" Grid.Column="0" TranslationY="10" HorizontalOptions="Center"/>
+                <Grid HorizontalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Pepperoni" FontSize="13" TranslationX="13" VerticalOptions="Center" Grid.Column="0" TranslationY="0"/>
+                    <CheckBox x:Name="pepperoni" TranslationX="12" Grid.Column="1" TranslationY="0" CheckedChanged="CheckBox_CheckedChanged"/>
+
+                    <Label Text="Mushrooms" FontSize="13" TranslationX="13" VerticalOptions="Center" Grid.Column="0" TranslationY="20"/>
+                    <CheckBox x:Name="mushrooms" TranslationX="12" Grid.Column="1" TranslationY="20" CheckedChanged="CheckBox_CheckedChanged"/>
+                
+                    <Label Text="Peppers" FontSize="13" TranslationX="13" VerticalOptions="Center" Grid.Column="0" TranslationY="40"/>
+                    <CheckBox x:Name="peppers" TranslationX="12" Grid.Column="1" TranslationY="40" CheckedChanged="CheckBox_CheckedChanged"/>
+
+                    <Label Text="Pineapples" FontSize="13" TranslationX="13" VerticalOptions="Center" Grid.Column="0" TranslationY="60"/>
+                    <CheckBox x:Name="pineapple" TranslationX="12" Grid.Column="1" TranslationY="60" CheckedChanged="CheckBox_CheckedChanged"/>
+
+                    <Label Text="Bacon" FontSize="13" TranslationX="13" VerticalOptions="Center" Grid.Column="0" TranslationY="80"/>
+                    <CheckBox x:Name="bacon" TranslationX="12" Grid.Column="1" TranslationY="80" CheckedChanged="CheckBox_CheckedChanged"/>
+
+                    <Label Text="Olives" FontSize="13" TranslationX="13" VerticalOptions="Center" Grid.Column="0" TranslationY="100"/>
+                    <CheckBox x:Name="olives" TranslationX="12" Grid.Column="1" TranslationY="100" CheckedChanged="CheckBox_CheckedChanged"/>
+
+                    <Label Text="Onions" FontSize="13" TranslationX="13" VerticalOptions="Center" Grid.Column="0" TranslationY="120"/>
+                    <CheckBox x:Name="onions" TranslationX="12" Grid.Column="1" TranslationY="120" CheckedChanged="CheckBox_CheckedChanged"/>
+                </Grid>
+            </VerticalStackLayout>
+            <VerticalStackLayout  BackgroundColor="#090f2f" HeightRequest="140" TranslationY="115">
+                <Button 
+                     Text="CONTINUE" HorizontalOptions="CenterAndExpand" WidthRequest="150" BackgroundColor="#ff9e36" TranslationY="35"/>
+            </VerticalStackLayout>
 
         </VerticalStackLayout>
     </ScrollView>
