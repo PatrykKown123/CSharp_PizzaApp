@@ -57,13 +57,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\bacon.png" />
 	  <None Remove="Resources\Images\cola.png" />
 	  <None Remove="Resources\Images\forkandspoon.png" />
 	  <None Remove="Resources\Images\forkspoon.png" />
 	  <None Remove="Resources\Images\garlicdipping.png" />
 	  <None Remove="Resources\Images\mappin.png" />
 	  <None Remove="Resources\Images\mobilephoneicon.png" />
+	  <None Remove="Resources\Images\mushrooms.png" />
+	  <None Remove="Resources\Images\olives.png" />
+	  <None Remove="Resources\Images\onions.png" />
+	  <None Remove="Resources\Images\pepper.png" />
 	  <None Remove="Resources\Images\pepperoni.png" />
+	  <None Remove="Resources\Images\pineapples.png" />
 	  <None Remove="Resources\Images\pizza.png" />
 	  <None Remove="Resources\Images\pizzabase.png" />
 	  <None Remove="Resources\Images\pizzatexture.jpg" />
