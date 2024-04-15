@@ -7,9 +7,13 @@
         <VerticalStackLayout BackgroundColor="LightGray">
             <VerticalStackLayout BackgroundColor="#090f2f">
                 <Label 
-                    Text="Just Pizza!" FontSize="Large" HorizontalOptions="Center"  FontAttributes="Bold" TextColor="White" />
-                <Label 
-                    Text="Delivering to: Client's Address" FontSize="12.5" HorizontalOptions="Center"  FontAttributes="Bold" TextColor="White" x:Name="address"/>
+                    Text="Just Pizza!" Style="{StaticResource whiteTitle}" />
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Label 
+                    Text="Delivering to:  " FontSize="15"  FontAttributes="Bold" TextColor="White"  />
+                    <Label 
+                    Text="{Binding CustomerLocation}" FontSize="15" FontAttributes="Bold" TextColor="White" x:Name="address" TranslationX="10"/>
+                </HorizontalStackLayout>
             </VerticalStackLayout>
 
             <Grid>

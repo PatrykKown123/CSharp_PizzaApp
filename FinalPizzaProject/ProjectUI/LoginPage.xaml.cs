@@ -1,3 +1,4 @@
+using FinalPizzaProject.BusinessLogic;
 using FinalPizzaProject.DataLayer;
 using Microsoft.Maui.ApplicationModel.Communication;
 
@@ -7,21 +8,25 @@ public partial class LoginPage : ContentPage
 {
 
     DataManager manager = new DataManager();
+
+    Customer pushedCustomerData = new Customer();
     public LoginPage()
 	{
 		InitializeComponent();
-	}
+       CreateAmount.customerDatabase = manager.PopulateList();
+    }
 
     private async void login_Clicked(object sender, EventArgs e)
     {
-        bool isInJson = false;
-        manager.ReadFromFile();
-            for (int i = 0; i < DataManager.customerDataBase.Count; i++)
+            bool isInJson = false;
+        //CreateAmount.customerDatabase = manager.PopulateList();
+        for (int i = 0; i < CreateAmount.customerDatabase.Count; i++)
             {
-                if (DataManager.customerDataBase[i].CustomerEmail.Equals(username.Text.ToString()) && (DataManager.customerDataBase[i].CustomerPassword.Equals(password.Text.ToString())))
+                if (CreateAmount.customerDatabase[i].CustomerEmail.Equals(username.Text.ToString()) && (CreateAmount.customerDatabase[i].CustomerPassword.Equals(password.Text.ToString())))
                 {
                     isInJson = true;
-                    await Navigation.PushAsync(new ItemOptions());
+                    pushedCustomerData = CreateAmount.customerDatabase[i];
+                    await Navigation.PushAsync(new ItemOptions(pushedCustomerData));
                 }
             }
 

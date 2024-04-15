@@ -8,9 +8,13 @@
             <HorizontalStackLayout HeightRequest="3" BackgroundColor="#ff9e36"></HorizontalStackLayout>
             <VerticalStackLayout BackgroundColor="#090f2f">
                 <Label 
-                    Text="Just Pizza!" FontSize="Large" HorizontalOptions="Center"  FontAttributes="Bold" TextColor="White" />
-                <Label 
-                    Text="Delivering to: Client's Address" FontSize="12.5" HorizontalOptions="Center"  FontAttributes="Bold" TextColor="White" x:Name="address"/>
+                    Text="Just Pizza!" Style="{StaticResource whiteTitle}"/>
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Label 
+                        Text="Delivering to:  " FontSize="15"  FontAttributes="Bold" TextColor="White"  />
+                    <Label 
+                        Text="{Binding CustomerLocation}" FontSize="15" FontAttributes="Bold" TextColor="White" x:Name="address" TranslationX="10"/>
+                </HorizontalStackLayout>
             </VerticalStackLayout>
             <HorizontalStackLayout HeightRequest="3" BackgroundColor="#ff9e36"></HorizontalStackLayout>
             <Grid BackgroundColor="DarkGray" x:Name="pizzaBuilder">
@@ -32,7 +36,7 @@
                     <Label Text="Gluten Free Crust" FontSize="13" TranslationX="13" VerticalOptions="Center" Grid.Column="0" TranslationY="20"/>
                     <CheckBox x:Name="glutenfreeCrust" TranslationX="12" Grid.Column="1" TranslationY="20"/>
                 </Grid>
-                <Label Text="Pizza Toppings" FontSize="Small" FontAttributes="Bold" TranslationX="13" Grid.Column="0" TranslationY="10" HorizontalOptions="Center"/>
+                <Label Text="Pizza Toppings (+$0.50)" FontSize="Small" FontAttributes="Bold" TranslationX="13" Grid.Column="0" TranslationY="10" HorizontalOptions="Center"/>
                 <Grid HorizontalOptions="Center">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
@@ -63,7 +67,7 @@
             </VerticalStackLayout>
             <VerticalStackLayout  BackgroundColor="#090f2f" HeightRequest="140" TranslationY="115">
                 <Button 
-                     Text="CONTINUE" HorizontalOptions="CenterAndExpand" WidthRequest="150" BackgroundColor="#ff9e36" TranslationY="35"/>
+                     Text="CONTINUE" HorizontalOptions="CenterAndExpand" WidthRequest="150" BackgroundColor="#ff9e36" TranslationY="35" x:Name="continueOn" Clicked="continueOn_Clicked"/>
             </VerticalStackLayout>
 
         </VerticalStackLayout>

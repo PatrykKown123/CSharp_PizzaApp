@@ -6,7 +6,7 @@
     <ScrollView>
         <VerticalStackLayout>
             <Label 
-            Text="Create Account" FontSize="Large" HorizontalOptions="Center" FontAttributes="Bold"/>
+            Text="Create Account" Style="{StaticResource title}"/>
             
             <Label 
             Text="To become a pizza lover!" FontSize="Small" FontAttributes="Italic" HorizontalOptions="Center"/>

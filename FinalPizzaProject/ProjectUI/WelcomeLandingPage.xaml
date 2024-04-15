@@ -10,7 +10,7 @@
         <Label 
             Text="Welcome," FontSize="Large" HorizontalOptions="Center" TextColor="White" TranslationY="25"/>
         <Label 
-            Text="John Doe" FontSize="Small" FontAttributes="Bold" HorizontalOptions="Center" TextColor="White" TranslationY="25" x:Name="personsName"/>
+            Text="{Binding CustomerName}" FontSize="Small" FontAttributes="Bold" HorizontalOptions="Center" TextColor="White" TranslationY="25" x:Name="personsName"/>
         <Label 
             Text="DISCOVER THE BEST PIZZA NEAR YOU!" HorizontalOptions="Center" TextColor="White" TranslationY="25"/>
         <Button 

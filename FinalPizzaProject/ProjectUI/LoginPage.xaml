@@ -7,7 +7,7 @@
     <ScrollView>
         <VerticalStackLayout>
             <Label 
-                Text="Just Pizza!" FontSize="Large" HorizontalOptions="Center"  FontAttributes="Bold"/>
+                Text="Just Pizza!" Style="{StaticResource title}"/>
             <Image Source="pizza.png" WidthRequest="400" HorizontalOptions="Center"/>
             <Entry Placeholder="Username" x:Name="username" PlaceholderColor="Black" HorizontalOptions="CenterAndExpand" WidthRequest="300"/>
             <Entry Placeholder="Password" x:Name="password" PlaceholderColor="Black" HorizontalOptions="CenterAndExpand" WidthRequest="300"/>

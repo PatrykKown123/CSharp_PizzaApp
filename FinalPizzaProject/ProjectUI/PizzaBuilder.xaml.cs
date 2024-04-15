@@ -1,9 +1,12 @@
+using FinalPizzaProject.BusinessLogic;
+
 namespace FinalPizzaProject.ProjectUI;
 
 public partial class PizzaBuilder : ContentPage
 {
     List<CheckBox> checkboxes = new List<CheckBox>();
-    Dictionary<CheckBox, Image> toppingsDictionary = new Dictionary<CheckBox, Image>(); 
+    Dictionary<CheckBox, Image> toppingsDictionary = new Dictionary<CheckBox, Image>();
+    Customer pushedCustomerData = new Customer();
     Image pepperoniImage = new Image()
     {
         Source = "pepperoni.png",
@@ -49,6 +52,23 @@ public partial class PizzaBuilder : ContentPage
         toppingsDictionary.Add(olives, olivesImage);
         toppingsDictionary.Add(onions, onionsImage);
         toppingsDictionary.Add(bacon, baconImage);
+
+        BindingContext = pushedCustomerData;
+    }
+
+    public PizzaBuilder(Customer pushedCustomerData)
+    {
+        InitializeComponent();
+        this.pushedCustomerData = pushedCustomerData;
+        toppingsDictionary.Add(pepperoni, pepperoniImage);
+        toppingsDictionary.Add(peppers, pepperImage);
+        toppingsDictionary.Add(pineapple, pineappleImage);
+        toppingsDictionary.Add(mushrooms, mushroomImage);
+        toppingsDictionary.Add(olives, olivesImage);
+        toppingsDictionary.Add(onions, onionsImage);
+        toppingsDictionary.Add(bacon, baconImage);
+
+        BindingContext = pushedCustomerData;
     }
 
     public void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
@@ -75,5 +95,8 @@ public partial class PizzaBuilder : ContentPage
     }
 
 
-
+    private void continueOn_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new SummaryPage(pushedCustomerData));
+    }
 }

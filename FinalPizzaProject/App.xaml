@@ -9,7 +9,16 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
-            
+            <Style x:Key="title" TargetType="Label">
+                <Setter Property="FontSize" Value="50"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+            <Style x:Key="whiteTitle" TargetType="Label" BasedOn="{StaticResource title}">
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
