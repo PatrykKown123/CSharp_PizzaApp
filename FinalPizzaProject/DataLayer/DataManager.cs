@@ -26,6 +26,14 @@ namespace FinalPizzaProject.DataLayer
             await JsonSerializer.SerializeAsync(inputStream, customers);
         }
 
+        public async Task UpdateWriteFile(List<Customer> customers) {
+            string targetFile = System.IO.Path.Combine(FileSystem.Current.AppDataDirectory, filename);
+            Debug.WriteLine(targetFile);
+
+            using FileStream inputStream = System.IO.File.OpenWrite(targetFile);
+            await JsonSerializer.SerializeAsync(inputStream, customers);
+        }
+
         public List<Customer> PopulateList() {
             string targetFile = Path.Combine(FileSystem.Current.AppDataDirectory, filename);
             Debug.WriteLine(targetFile);

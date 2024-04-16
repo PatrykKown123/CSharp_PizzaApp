@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinalPizzaProject.ProjectUI.SummaryPage"
              Title="SummaryPage">
-    <VerticalStackLayout BackgroundColor="Gray">
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="Gray">
+        <HorizontalStackLayout HeightRequest="3" BackgroundColor="#ff9e36"></HorizontalStackLayout>
         <VerticalStackLayout BackgroundColor="#090f2f">
             <Label 
                Text="Just Pizza!" Style="{StaticResource whiteTitle}" />
@@ -15,7 +17,7 @@
             </HorizontalStackLayout>
         </VerticalStackLayout>
         <HorizontalStackLayout HeightRequest="3" BackgroundColor="#ff9e36"></HorizontalStackLayout>
-        <HorizontalStackLayout BackgroundColor="DarkGray" TranslationY="20">
+        <HorizontalStackLayout BackgroundColor="DarkGray" >
             <Image Source="pizza.png"  HeightRequest="200" BackgroundColor="White"/>
             <VerticalStackLayout VerticalOptions="Center">
                 <Label Text="Pizza" FontAttributes="Bold" FontSize="25" TranslationX="15"/>
@@ -24,7 +26,7 @@
             <Entry Text="1" x:Name="pizzaQuantity" TranslationX="35" BackgroundColor="White" HeightRequest="10" WidthRequest="10" TextChanged="pizzaQuantity_TextChanged"/>
         </HorizontalStackLayout>
         
-        <HorizontalStackLayout BackgroundColor="#36454F" TranslationY="20" HeightRequest="300">
+        <HorizontalStackLayout BackgroundColor="#36454F" TranslationY="0" HeightRequest="300">
             <VerticalStackLayout>
                 <Label Text="Total" FontSize="Medium" FontAttributes="Bold" TextDecorations="Underline" TextColor="White"/>
                 <Grid>
@@ -54,12 +56,14 @@
                     <Label Text="$null" FontSize="13" TextColor="White" Grid.Column="1"  Grid.Row="1" HorizontalOptions="End" x:Name="serviceFree" TranslationY="53"/>
                     <Label Text="Delivery Fee" FontSize="13" TextColor="White" Grid.Column="0" Grid.Row="1" TranslationY="71"/>
                     <Label Text="$null" FontSize="13" TextColor="White" Grid.Column="1"  Grid.Row="1" HorizontalOptions="End" x:Name="deliverFree" TranslationY="71"/>
-                    <HorizontalStackLayout Grid.ColumnSpan="1" BackgroundColor="Black" HeightRequest="5" Grid.Row="1" TranslationY="85"/>
+                    <HorizontalStackLayout Grid.ColumnSpan="1" BackgroundColor="Black" HeightRequest="0.5" Grid.Row="1" TranslationY="85"/>
                     <Label Text="Total" FontSize="13" TextColor="White" Grid.Column="0" Grid.Row="1" TranslationY="103" TextDecorations="Underline"/>
-                    <Label Text="$null" FontSize="13" TextColor="White" Grid.Column="1"  Grid.Row="1" HorizontalOptions="End" x:Name="cost" TranslationY="103" TextDecorations="Underline"/>
-
-                </Grid>
+                        <Label Text="$null" FontSize="13" TextColor="White" Grid.Column="1"  Grid.Row="1" HorizontalOptions="End" x:Name="cost" TranslationY="103" TextDecorations="Underline"/>
+                    </Grid>
             </VerticalStackLayout>
         </HorizontalStackLayout>
+            <Button 
+            Text="PLACE ORDER" HorizontalOptions="CenterAndExpand" WidthRequest="150" BackgroundColor="#ff9e36" TranslationY="15" x:Name="placeOrder" Clicked="placeOrder_Clicked"/>
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

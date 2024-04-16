@@ -10,7 +10,7 @@ namespace FinalPizzaProject.BusinessLogic
     {
         private string customerName;
         private string customerLocation;
-        private List<Purchase> purchases;
+        public List<Purchase> purchases = new List<Purchase>();
         private int customerID;
         private string customerPassword;
         private string customerEmail;

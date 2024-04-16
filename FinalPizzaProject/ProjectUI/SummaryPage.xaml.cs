@@ -1,4 +1,5 @@
 using FinalPizzaProject.BusinessLogic;
+using FinalPizzaProject.DataLayer;
 
 namespace FinalPizzaProject.ProjectUI;
 
@@ -7,6 +8,8 @@ public partial class SummaryPage : ContentPage
     Customer pushedCustomerData = new Customer();
     Pizza newPizza = new Pizza();
     double totalCost = 20.99;   
+    Purchase newPurchase = new Purchase();  
+    DataManager manager = new DataManager();
     public SummaryPage()
 	{
 		InitializeComponent();
@@ -66,5 +69,25 @@ public partial class SummaryPage : ContentPage
             }
         }
         catch(Exception) { }
+    }
+
+    private void placeOrder_Clicked(object sender, EventArgs e)
+    {
+        newPurchase = new Purchase()
+        {
+            ProductName = "whole pizza",
+            TotalCost = totalCost
+        };
+
+        CreateAmount.customerDatabase.ForEach(customer =>
+        {
+            if (customer != null && customer.purchases != null &&pushedCustomerData.CustomerPassword == customer.CustomerPassword && pushedCustomerData.CustomerEmail == customer.CustomerEmail)
+            {
+                customer.purchases.Add(newPurchase);
+            }
+        });
+        manager.UpdateWriteFile(CreateAmount.customerDatabase);
+        pushedCustomerData.Purchases.Add(newPurchase);
+
     }
 }
