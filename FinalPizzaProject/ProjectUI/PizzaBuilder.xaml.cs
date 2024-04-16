@@ -161,11 +161,11 @@ public partial class PizzaBuilder : ContentPage
             {
                 if (checkBox == regCrust)
                 {
-                    
+                    newPizza.PizzaBase = PizzaBase.RegularCrust;
                 }
                 else if (checkBox == glutenfreeCrust)
                 {
-                   
+                    newPizza.PizzaBase = PizzaBase.GlutenFree;
                 }
             }
             }
@@ -174,6 +174,6 @@ public partial class PizzaBuilder : ContentPage
 
         private void continueOn_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new SummaryPage(pushedCustomerData));
+        Navigation.PushAsync(new SummaryPage(pushedCustomerData,newPizza));
     }
 }

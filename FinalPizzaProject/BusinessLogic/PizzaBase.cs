@@ -8,11 +8,7 @@ namespace FinalPizzaProject.BusinessLogic
 {
     public enum PizzaBase
     {
-        ThinCrust,
-        ThickCrust,
-        WholeWheat,
-        GlutenFree,
-        CauliflowerCrust,
-        DairyFree,
+        RegularCrust,
+        GlutenFree
     }
 }
