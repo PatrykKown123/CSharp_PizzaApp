@@ -33,6 +33,14 @@ namespace FinalPizzaProject.BusinessLogic
             get => pizzaBase;
             set => pizzaBase = value;
         }
+        public string pizzaToppingsToString {
+
+            get {
+                //string concatenatedToppings = "";
+                string concatenatedToppings = string.Join($",{Environment.NewLine}", pizzaToppings);
+                return concatenatedToppings;
+            }
+        }
 
         public override string ToString()
         {

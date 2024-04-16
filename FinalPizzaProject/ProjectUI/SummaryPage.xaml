@@ -14,13 +14,52 @@
                     Text="{Binding CustomerLocation}" FontSize="15" FontAttributes="Bold" TextColor="White" x:Name="address" TranslationX="10"/>
             </HorizontalStackLayout>
         </VerticalStackLayout>
+        <HorizontalStackLayout HeightRequest="3" BackgroundColor="#ff9e36"></HorizontalStackLayout>
         <HorizontalStackLayout BackgroundColor="DarkGray" TranslationY="20">
             <Image Source="pizza.png"  HeightRequest="200" BackgroundColor="White"/>
             <VerticalStackLayout VerticalOptions="Center">
                 <Label Text="Pizza" FontAttributes="Bold" FontSize="25" TranslationX="15"/>
                 <Label Text="Price: $20.99" FontAttributes="Bold" FontSize="20" TranslationX="15"/>
             </VerticalStackLayout>
-            <Entry Text="1" x:Name="pizzaQuantity" TranslationX="35" BackgroundColor="White" HeightRequest="10" WidthRequest="10"/>
+            <Entry Text="1" x:Name="pizzaQuantity" TranslationX="35" BackgroundColor="White" HeightRequest="10" WidthRequest="10" TextChanged="pizzaQuantity_TextChanged"/>
+        </HorizontalStackLayout>
+        
+        <HorizontalStackLayout BackgroundColor="#36454F" TranslationY="20" HeightRequest="300">
+            <VerticalStackLayout>
+                <Label Text="Total" FontSize="Medium" FontAttributes="Bold" TextDecorations="Underline" TextColor="White"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="80"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="Base( )" FontSize="13" TextColor="White" Grid.Column="0" x:Name="baseData" Grid.Row="0"/>
+                    <Label Text="$20.99" FontSize="13" TextColor="White" Grid.Column="1" HorizontalOptions="End" x:Name="costPerPizza" Grid.Row="0"/>
+                    <Label Text="Toppings" FontSize="13" TextColor="White" Grid.Column="0" x:Name="toppingsData" TranslationY="18" Grid.Row="0" />
+                    <ListView ItemsSource="{Binding newPizza.PizzaToppings}" x:Name="toppingsListView" TranslationY="35" TranslationX="20" Grid.Row="0">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Detail="{Binding}" DetailColor="White"/>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <Label Text="$null" FontSize="13" TextColor="White" Grid.Column="1"  Grid.Row="0" HorizontalOptions="End" x:Name="toppingsCost" TranslationY="18"/>
+                    
+                    <Label Text="Tax" FontSize="13" TextColor="White" Grid.Column="0" Grid.Row="1" TranslationY="35"/>
+                    <Label Text="$null" FontSize="13" TextColor="White" Grid.Column="1"  Grid.Row="1" HorizontalOptions="End" x:Name="tax" TranslationY="35"/>
+                    <Label Text="Service Fee" FontSize="13" TextColor="White" Grid.Column="0" Grid.Row="1" TranslationY="53"/>
+                    <Label Text="$null" FontSize="13" TextColor="White" Grid.Column="1"  Grid.Row="1" HorizontalOptions="End" x:Name="serviceFree" TranslationY="53"/>
+                    <Label Text="Delivery Fee" FontSize="13" TextColor="White" Grid.Column="0" Grid.Row="1" TranslationY="71"/>
+                    <Label Text="$null" FontSize="13" TextColor="White" Grid.Column="1"  Grid.Row="1" HorizontalOptions="End" x:Name="deliverFree" TranslationY="71"/>
+                    <HorizontalStackLayout Grid.ColumnSpan="1" BackgroundColor="Black" HeightRequest="5" Grid.Row="1" TranslationY="85"/>
+                    <Label Text="Total" FontSize="13" TextColor="White" Grid.Column="0" Grid.Row="1" TranslationY="103" TextDecorations="Underline"/>
+                    <Label Text="$null" FontSize="13" TextColor="White" Grid.Column="1"  Grid.Row="1" HorizontalOptions="End" x:Name="cost" TranslationY="103" TextDecorations="Underline"/>
+
+                </Grid>
+            </VerticalStackLayout>
         </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>
