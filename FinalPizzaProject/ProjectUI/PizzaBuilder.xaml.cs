@@ -7,6 +7,8 @@ public partial class PizzaBuilder : ContentPage
     List<CheckBox> checkboxes = new List<CheckBox>();
     Dictionary<CheckBox, Image> toppingsDictionary = new Dictionary<CheckBox, Image>();
     Customer pushedCustomerData = new Customer();
+    Pizza newPizza= new Pizza();
+
     Image pepperoniImage = new Image()
     {
         Source = "pepperoni.png",
@@ -81,6 +83,36 @@ public partial class PizzaBuilder : ContentPage
                 {
                     Image toppingImage = toppingsDictionary[checkBox];
                     pizzaBuilder.Children.Add(toppingImage);
+
+                    if (toppingsDictionary[checkBox] == pepperoniImage)
+                    {
+                        newPizza.PizzaToppings.Add(PizzaToppings.Pepperoni);
+                    }
+                    else if (toppingsDictionary[checkBox] == pepperImage)
+                    {
+                        newPizza.PizzaToppings.Add(PizzaToppings.Pepper);
+                    }
+                    else if (toppingsDictionary[checkBox] == pineappleImage)
+                    {
+                        newPizza.PizzaToppings.Add(PizzaToppings.Pineapple);
+                    }
+                    else if (toppingsDictionary[checkBox] == mushroomImage)
+                    {
+                        newPizza.PizzaToppings.Add(PizzaToppings.Mushroom);
+                    }
+                    else if (toppingsDictionary[checkBox] == olivesImage)
+                    {
+                        newPizza.PizzaToppings.Add(PizzaToppings.Olives);
+                    }
+                    else if (toppingsDictionary[checkBox] == onionsImage)
+                    {
+                        newPizza.PizzaToppings.Add(PizzaToppings.Onion);
+                    }
+                    else
+                    {
+                        newPizza.PizzaToppings.Add(PizzaToppings.Bacon);
+                    }
+
                 }
             }
             else
@@ -89,13 +121,58 @@ public partial class PizzaBuilder : ContentPage
                 {
                     Image toppingImage = toppingsDictionary[checkBox];
                     pizzaBuilder.Children.Remove(toppingImage);
+                    if (toppingsDictionary[checkBox] == pepperoniImage)
+                    {
+                        newPizza.PizzaToppings.Remove(PizzaToppings.Pepperoni);
+                    }
+                    else if (toppingsDictionary[checkBox] == pepperImage)
+                    {
+                        newPizza.PizzaToppings.Remove(PizzaToppings.Pepper);
+                    }
+                    else if (toppingsDictionary[checkBox] == pineappleImage)
+                    {
+                        newPizza.PizzaToppings.Remove(PizzaToppings.Pineapple);
+                    }
+                    else if (toppingsDictionary[checkBox] == mushroomImage)
+                    {
+                        newPizza.PizzaToppings.Remove(PizzaToppings.Mushroom);
+                    }
+                    else if (toppingsDictionary[checkBox] == olivesImage)
+                    {
+                        newPizza.PizzaToppings.Remove(PizzaToppings.Olives);
+                    }
+                    else if (toppingsDictionary[checkBox] == onionsImage)
+                    {
+                        newPizza.PizzaToppings.Remove(PizzaToppings.Onion);
+                    }
+                    else
+                    {
+                        newPizza.PizzaToppings.Remove(PizzaToppings.Bacon);
+                    }
                 }
             }
         }
     }
 
+    public void CheckBox_CheckedChangedPizzaBase(object sender, CheckedChangedEventArgs e)
+    { 
+        if(sender is CheckBox checkBox){
+            if (checkBox.IsChecked)
+            {
+                if (checkBox == regCrust)
+                {
+                    
+                }
+                else if (checkBox == glutenfreeCrust)
+                {
+                   
+                }
+            }
+            }
+    
+    }
 
-    private void continueOn_Clicked(object sender, EventArgs e)
+        private void continueOn_Clicked(object sender, EventArgs e)
     {
         Navigation.PushAsync(new SummaryPage(pushedCustomerData));
     }

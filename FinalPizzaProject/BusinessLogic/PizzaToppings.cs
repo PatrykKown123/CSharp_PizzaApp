@@ -13,6 +13,7 @@ namespace FinalPizzaProject.BusinessLogic
         Onion,
         Bacon,
         Pepper,
-        Pineapple
+        Pineapple,
+        Olives
     }
 }

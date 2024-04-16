@@ -8,9 +8,8 @@ namespace FinalPizzaProject.BusinessLogic
 {
     public class Pizza : Product
     {
-        private List<PizzaToppings> pizzaToppings;
+        private List<PizzaToppings> pizzaToppings = new List<PizzaToppings>();
         private PizzaBase pizzaBase;
-
 
         public Pizza()
         {
