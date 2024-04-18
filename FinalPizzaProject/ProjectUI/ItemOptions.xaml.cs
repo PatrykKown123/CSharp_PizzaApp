@@ -24,7 +24,7 @@ public partial class ItemOptions : ContentPage
 		}
 		else 
 		{
-			Navigation.PushAsync(new SummaryPage(pushedCustomerData));
+			//Navigation.PushAsync(new SummaryPage(pushedCustomerData));
 		}
     }
 }
